@@ -47,7 +47,7 @@ function onSuccess(location) {
     Text_notice.classList.remove("error");
     console.log(location)
     const {latitude, longitude} = location.coords;
-    const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=ed719ca83ca7dfc10444442b8c9dfc32`;
+    const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid={API_KEY}`;
     fetchData(api);
 }
 
@@ -57,7 +57,7 @@ function OnError(error) {
 }
 
 function requestAPI(city) {
-    const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=ed719ca83ca7dfc10444442b8c9dfc32`
+    const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid={API_KEY}2`
     fetchData(api)
 }
 
